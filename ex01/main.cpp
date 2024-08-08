@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/08 14:38:20 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/08 15:52:55 by ntalmon          ###   ########.fr       */
+/*   Created: 2024/08/08 12:09:47 by ntalmon           #+#    #+#             */
+/*   Updated: 2024/08/08 14:18:28 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "ClapTrap.hpp"
 
-# include "ClapTrap.hpp"
-
-class	ScavTrap: public ClapTrap
+int	main(void)
 {
-		public:
-				ScavTrap(void);
-				ScavTrap(std::string name);
-				ScavTrap(ScavTrap const &src);
-				~ScavTrap(void);
+	ClapTrap	ClapTrap1;
+	ClapTrap	ClapTrap2("ClapTrap2");
+	ClapTrap	ClapTrap3(ClapTrap2);
+	
+	ClapTrap1 = ClapTrap3;
 
-				ScavTrap	&operator= (ScavTrap const &src);
-				
-				void	guardGate(void);
-				void	attack(std::string const &target);
-};
+	ClapTrap1.attack("ClapTrap2");
+	ClapTrap2.takeDamage(5);
+	ClapTrap2.beRepaired(5);
 
-#endif
+	return (0);
+}
