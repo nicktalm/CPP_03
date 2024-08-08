@@ -2,7 +2,7 @@ NAME = claptrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SOURCE = main.cpp \
-		Fixed.cpp
+		ClapTrap.cpp
 OBJS = $(SOURCE:.cpp=.o)
 
 $(NAME):	$(OBJS)
