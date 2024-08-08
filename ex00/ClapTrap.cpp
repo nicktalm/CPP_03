@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:10:02 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/08 14:24:18 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/08 15:41:24 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,31 @@
 
 // Constructor
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void):
+	name("Default"),
+	hitpoints(10),
+	energypoints(10),
+	attackdamage(0)
 {
 	std::cout << "Default Constructor called" << std::endl;
-	this->name = "Default";
-	this->hitpoints = 10;
-	this->energypoints = 10;
-	this->attackdamage = 0;
 }
 
-ClapTrap::ClapTrap(std::string srcname)
+ClapTrap::ClapTrap(std::string srcname):
+	name(srcname),
+	hitpoints(10),
+	energypoints(10),
+	attackdamage(0)
 {
 	std::cout << "Constructor with name called" << std::endl;
-	this->name = srcname;
-	this->hitpoints = 10;
-	this->energypoints = 10;
-	this->attackdamage = 0;
 }
 
-ClapTrap::ClapTrap(ClapTrap const &src)
+ClapTrap::ClapTrap(ClapTrap const &src):
+	name(src.name),
+	hitpoints(src.hitpoints),
+	energypoints(src.energypoints),
+	attackdamage(src.attackdamage)
 {
 	std::cout << "Copy Constructor called" << std::endl;
-	*this = src;
 }
 
 // Destructor
@@ -49,7 +52,7 @@ ClapTrap::~ClapTrap(void)
 
 ClapTrap	&ClapTrap::operator= (ClapTrap const &src)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Assignment operator called" << std::endl;
 	if (this != &src)
 	{
 		this->name = src.name;

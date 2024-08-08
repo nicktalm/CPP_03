@@ -1,4 +1,5 @@
 .vscode
 *.o
 ClapTrap
+ScavTrap
 .DS_Store
