@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:10:02 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/08 13:31:38 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/08 14:24:18 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap(std::string srcname)
 
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
-	std::cout << "Copy Constructor called";
+	std::cout << "Copy Constructor called" << std::endl;
 	*this = src;
 }
 
@@ -49,7 +49,7 @@ ClapTrap::~ClapTrap(void)
 
 ClapTrap	&ClapTrap::operator= (ClapTrap const &src)
 {
-	std::cout << "Copy assignment operator called";
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
 	{
 		this->name = src.name;
@@ -62,26 +62,6 @@ ClapTrap	&ClapTrap::operator= (ClapTrap const &src)
 
 // Memberfunctions
 
-std::string	ClapTrap::getName(void)
-{
-	return (name);
-}
-
-int	ClapTrap::gethitpoints(void)
-{
-	return (hitpoints);
-}
-
-int	ClapTrap::getenergypoints(void)
-{
-	return (hitpoints);
-}
-
-int	ClapTrap::getattackdamage(void)
-{
-	return (attackdamage);
-}
-
 void	ClapTrap::attack(const std::string& target)
 {
 	if (hitpoints > 0 && energypoints > 0)
@@ -91,7 +71,7 @@ void	ClapTrap::attack(const std::string& target)
 	}
 }
 
-void	ClapTrap::takeDemage(unsigned int amount)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (hitpoints > 0 && energypoints > 0)
 	{
@@ -110,6 +90,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		hitpoints = hitpoints + amount;
 		energypoints--;
-		std::cout << "ClapTrapp " << name << " repaired itself and has now " << hitpoints << " hitpoints" << std::endl;
+		std::cout << "ClapTrap " << name << " repaired itself and has now " << hitpoints << " hitpoints" << std::endl;
 	}
 }

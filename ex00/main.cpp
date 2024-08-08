@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:09:47 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/08 13:31:19 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/08 14:18:28 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 int	main(void)
 {
-	ClapTrap	a("Nick");
-	ClapTrap	b;
-
-	a.attack(b.getName());
-	b.takeDemage(a.getattackdamage());
-	b.beRepaired(b.gethitpoints());
+	ClapTrap	ClapTrap1;
+	ClapTrap	ClapTrap2("ClapTrap2");
+	ClapTrap	ClapTrap3(ClapTrap2);
 	
+	ClapTrap1 = ClapTrap3;
+
+	ClapTrap1.attack("ClapTrap2");
+	ClapTrap2.takeDamage(5);
+	ClapTrap2.beRepaired(5);
+
 	return (0);
 }
