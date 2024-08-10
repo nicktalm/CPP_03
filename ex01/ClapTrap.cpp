@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nicktalmon <nicktalmon@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:10:02 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/08 15:41:24 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/10 14:54:24 by nicktalmon       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(void):
 	energypoints(10),
 	attackdamage(0)
 {
-	std::cout << "Default Constructor called" << std::endl;
+	std::cout << "ClapTrap default Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string srcname):
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(std::string srcname):
 	energypoints(10),
 	attackdamage(0)
 {
-	std::cout << "Constructor with name called" << std::endl;
+	std::cout << "ClapTrap constructor with name called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src):
@@ -38,21 +38,21 @@ ClapTrap::ClapTrap(ClapTrap const &src):
 	energypoints(src.energypoints),
 	attackdamage(src.attackdamage)
 {
-	std::cout << "Copy Constructor called" << std::endl;
+	std::cout << "ClapTrap copy Constructor called" << std::endl;
 }
 
 // Destructor
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 //Operator
 
 ClapTrap	&ClapTrap::operator= (ClapTrap const &src)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "ClapTrap assignment operator called" << std::endl;
 	if (this != &src)
 	{
 		this->name = src.name;
