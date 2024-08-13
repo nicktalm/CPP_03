@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicktalmon <nicktalmon@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:09:47 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/10 15:24:47 by nicktalmon       ###   ########.fr       */
+/*   Updated: 2024/08/13 12:38:56 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,17 @@
 
 int	main(void)
 {
-	ScavTrap scavtrap("ScavTrap");
+	ClapTrap	ClapTrap("ClapTrap");
+	ScavTrap	ScavTrap("ScavTrap");
 
-	scavtrap.attack("target");
+	ClapTrap.attack("target");
+	ClapTrap.takeDamage(10);
+	ClapTrap.beRepaired(5);
+	
+	ScavTrap.attack("target");
+	ScavTrap.takeDamage(10);
+	ScavTrap.beRepaired(5);
+	ScavTrap.guardGate();
 
 	return (0);
 }

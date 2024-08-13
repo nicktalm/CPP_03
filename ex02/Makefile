@@ -3,7 +3,8 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SOURCE = main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp
+		ScavTrap.cpp \
+		FragTrap.cpp
 OBJ_DIR = objs
 OBJS = $(addprefix $(OBJ_DIR)/, $(SOURCE:.cpp=.o))
 
