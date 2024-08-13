@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:10:02 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/13 12:03:54 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/13 17:04:07 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		energypoints--;
 		std::cout << "ClapTrap " << name << " repaired itself and has now " << hitpoints << " hitpoints" << std::endl;
 	}
+}
+
+void	ClapTrap::setName(std::string srcname)
+{
+	name = srcname;
+}
+
+std::string	ClapTrap::getName(void) const
+{
+	return (name);
 }

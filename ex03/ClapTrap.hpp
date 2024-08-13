@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:10:15 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/13 12:04:02 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/13 17:04:00 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ class	ClapTrap
 			void	attack(const std::string& target);
 			void	takeDamage(unsigned int amount);
 			void	beRepaired(unsigned int amount);
+
+			void	setName(std::string name);
+			std::string	getName(void) const;
 };
 
 #endif
