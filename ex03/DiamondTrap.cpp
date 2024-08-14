@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 13:17:00 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/08/13 17:03:51 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/08/14 11:59:11 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,9 @@ DiamondTrap	&DiamondTrap::operator= (DiamondTrap const &src)
 void	DiamondTrap::whoAmI(void)
 {
 	std::cout << "My name is " << this->name << " and my ClapTrap name is " << ClapTrap::getName() << std::endl;
+}
+
+void	DiamondTrap::attack(std::string const &target)
+{
+	ScavTrap::attack(target);
 }
